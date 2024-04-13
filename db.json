@@ -1,0 +1,14 @@
+{
+    "meters": [
+      { "id": 1, "name": "Meter 1", "location": "Syokimau", "type": "Electricity Meter", "previous reading" : 0, "current reading": 0, "Bill":0 },
+      { "id": 2, "name": "Meter 2", "location": "Katani", "type": "Electricity Meter", "previous reading" : 0,  "current reading": 50, "Bill":0 },
+      { "id": 3, "name": "Meter 3", "location": "Athi View", "type": "Electricity Meter", "previous reading" : 0,"current reading": 200, "Bill":0},
+      { "id": 4, "name": "Meter 4", "location": "Sabaki", "type": "Electricity Meter", "previous reading" : 0,"current reading": 150, "Bill":0 },
+      { "id": 5, "name": "Meter 5", "location": "Imara Daima", "type": "Electricity Meter", "previous reading" : 0,"current reading": 80, "Bill":0 },
+      { "id": 6, "name": "Meter 6", "location": "Cabanas", "type": "Electricity Meter", "previous reading" : 0,"current reading": 220, "Bill":0 },
+      { "id": 7, "name": "Meter 7", "location": "Kitengela", "type": "Electricity Meter", "previous reading" : 0,"current reading": 120, "Bill":0 },
+      { "id": 8, "name": "Meter 8", "location": "Tuffoam", "type": "Electricity Meter", "previous reading" : 0,"current reading": 70, "Bill":0 },
+      { "id": 9, "name": "Meter 9", "location": "Kinanie", "type": "Electricity Meter", "previous reading" : 0,"current reading": 180, "Bill":0 },
+      { "id": 10, "name": "Meter 10", "location": "GreatWall", "type": "Electricity Meter", "previous reading" : 0,"current reading": 180, "Bill":0 }
+    ]
+  }

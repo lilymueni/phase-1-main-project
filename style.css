@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+h1 {
+    text-align: center;
+    color: #2ecc71; 
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2ecc71; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60; 
+}
+
+.meterItem {
+    background-color: #2ecc71; 
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.meterItem button {
+    background-color: #fff;
+    color: #2ecc71; 
+    border: 1px solid #2ecc71; 
+    margin-left: 5px;
+}
+
+.meterItem button:hover {
+    background-color: #2ecc71; 
+    color: #fff;
+}
+
+.second-container {
+    background-color: #2ecc71; 
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px; 
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.second-container p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode button {
+    background-color: #555;
+}
