@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <p>Current Reading: <input type="text" id="currentReading" value="${meter['current reading']}"></p>
                         <p>Previous Reading: <input type="text" id="previousReading" value="${meter['previous reading']}"></p>
                         <p>Bill: <input type="text" id="bill" value="${meter.Bill}"></p>
+                        <button id="updateButton">Update</button>
                         <button id="resetButton">Reset</button>
                     `;
 
@@ -58,10 +59,18 @@ document.addEventListener('DOMContentLoaded', function () {
                         console.log('Distinct event triggered on second container');
                     });
 
+                    // Event listener for update button
+                    document.getElementById('updateButton').addEventListener('click', function () {
+                        const newCurrentReading = document.getElementById('currentReading').value;
+                        updateCurrentReading(meterNo, newCurrentReading);
+                    });
+
                     // Event listener for reset button
                     document.getElementById('resetButton').addEventListener('click', function () {
                         // Reset current reading to 0
                         document.getElementById('currentReading').value = 0;
+                        // Update the current reading in the database
+                        updateCurrentReading(meterNo, 0);
                     });
 
                     // Show the second container
@@ -75,6 +84,31 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(function (error) {
                 console.error('Error fetching meter credentials:', error);
             });
+    }
+
+    // Function to update current reading
+    function updateCurrentReading(meterId, newCurrentReading) {
+        fetch(`http://localhost:3000/meters/${meterId}/currentReading`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ currentReading: newCurrentReading })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data); // Log the response from the server
+            // Handle success if needed
+        })
+        .catch(error => {
+            console.error('Error updating current reading:', error);
+            // Handle error if needed
+        });
     }
 
     // Event listener for toggling dark and light mode
